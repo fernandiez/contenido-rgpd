@@ -4,7 +4,7 @@ Donate link: http://www.fernan.com.es/wordpress/
 Tags: rgpd, gpdr, legal
 Requires at least: 5.0
 Tested up to: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -27,8 +27,12 @@ Legal Notice, Privacy Policy and Cookies Policy pages content is an essential sa
 1. Panel de datos RGPD
 
 == Changelog ==
+
+= 1.0.1 =
+* Images fix
+
 = 1.0.1 =
 * Tested up to WordPress 5.6
 
-= 1.0.1 =
+= 1.0.0 =
 * Initial release
