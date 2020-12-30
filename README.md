@@ -21,11 +21,11 @@ Legal Notice, Privacy Policy and Cookies Policy pages content is an essential sa
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.0.2 =
 * Images fix
 
 = 1.0.1 =
 * Tested up to WordPress 5.6
 
-= 1.0.2 =
+= 1.0.0 =
 * Initial release
