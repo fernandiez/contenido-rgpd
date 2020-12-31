@@ -4,7 +4,7 @@ Donate link: http://www.fernan.com.es/wordpress/
 Tags: rgpd, gpdr, legal
 Requires at least: 5.0
 Tested up to: 5.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -23,13 +23,22 @@ Legal Notice, Privacy Policy and Cookies Policy pages content is an essential sa
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. Configure RPGD data from the new Contenido RGPD menu in your WordPress dashboard
 
+== Frequently Asked Questions ==
+
+= How can I collaborate with the plugin code improvement? =
+
+[Contenido RGPD] (https://github.com/fernandiez/contenido-rgpd/) is allocated in this Github repository, so you are invited to fork it or add new request or comment issues here.
+
 == Screenshots ==
 1. Panel de datos RGPD
 
 == Changelog ==
 
-= 1.0.1 =
-* Images fix
+= 1.0.3 =
+* Deploy from Github added
+
+= 1.0.2 =
+* Tested up to WordPress 5.6
 
 = 1.0.1 =
 * Tested up to WordPress 5.6

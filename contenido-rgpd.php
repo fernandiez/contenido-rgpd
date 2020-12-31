@@ -4,7 +4,7 @@
  * Plugin Name:       Contenido RGPD
  * Plugin URI:        https://github.com/fernandiez/contenido-rgpd
  * Description:       Contenido RGPD creates RGPD / GDPR legal pages from your own previously added information
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Fernan Díez
  * Author URI:        https://www.fernan.com.es
  * License:           GPL-2.0+
