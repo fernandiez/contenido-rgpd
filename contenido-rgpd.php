@@ -660,3 +660,30 @@ El Usuario puede deshabilitar, rechazar y eliminar las cookies —total o parcia
 
 }
 add_action( 'activated_plugin', 'create_rgpd_cookies_page' );
+
+
+// Settings links to the plugin entry in the plugins menu
+function contenido_rgpd_plugin_action_links($links, $file) {
+    static $this_plugin;
+ 
+    if (!$this_plugin) {
+        $this_plugin = plugin_basename(__FILE__);
+    }
+ 
+    // check to make sure we are on the correct plugin
+    if ($file == $this_plugin) {
+ 
+		// link to what ever you want
+        $plugin_links[] = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=contenido-rgpd">Setiings</a>';
+ 
+        // add the links to the list of links already there
+		foreach($plugin_links as $link) {
+			array_unshift($links, $link);
+		}
+    }
+ 
+    return $links;
+}
+add_filter('plugin_action_links', 'contenido_rgpd_plugin_action_links', 10, 2);
+
+
