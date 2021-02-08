@@ -5,7 +5,7 @@ Donate link: http://www.fernan.com.es/podcast/
 Tags: rgpd, gdpr, legal
 Requires at least: 5.0
 Tested up to: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -38,8 +38,11 @@ Legal Notice, Privacy Policy and Cookies Policy pages content is an essential sa
 
 == Changelog ==
 
-= 1.0.4 =
+= 1.0.5 =
 * Settings link in Plugins Page added
+
+= 1.0.4 =
+* Some code fix
 
 = 1.0.3 =
 * Deploy from Github added
