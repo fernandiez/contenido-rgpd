@@ -4,7 +4,7 @@
  * Plugin Name:       Contenido RGPD
  * Plugin URI:        https://github.com/fernandiez/contenido-rgpd
  * Description:       Contenido RGPD creates RGPD / GDPR legal pages from your own previously added information
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Fernan Díez
  * Author URI:        https://www.fernan.com.es
  * License:           GPL-2.0+
@@ -39,8 +39,9 @@ class ContenidoRGPD {
 		$this->contenido_rgpd_options = get_option( 'contenido_rgpd_option_name' ); ?>
 
 		<div class="wrap">
-			<h2>Contenido RGPD</h2>
-			<p>Contenido RGPD</p>
+			<h1>Contenido RGPD</h1>
+			<h2>Información legal para RGPD / GDPR</h2>
+			<p>Completa los siguientes campos relativos a la información legal RGPD / GDPR.</p>
 			<?php settings_errors(); ?>
 
 			<form method="post" action="options.php">
@@ -285,6 +286,15 @@ if ( is_admin() )
  * $email_10 = $contenido_rgpd_options['email_10']; // Email
  */
 
+// Add Settings Link to Plugin Page
+add_filter('plugin_action_links_'.plugin_basename(__FILE__), 'salcode_add_plugin_page_settings_link');
+function salcode_add_plugin_page_settings_link( $links ) {
+	$links[] = '<a href="' .
+		admin_url( 'admin.php?page=contenido-rgpd' ) .
+		'">' . __('Settings') . '</a>';
+	return $links;
+}
+
 // Creates Shortcodes
 
 // Creates Shortcode rgpd_sitio_web
@@ -380,7 +390,7 @@ add_shortcode( 'rgpd_email', 'shortcode_rgpd_email' );
 // Creates RPGD pages
 
 // Creates Aviso Legal RGPD page
- function create_rgpd_legal_page( $user_id ) {
+function create_rgpd_legal_page( $user_id ) {
 
     $post_data = array(
         'post_title' => 'Aviso Legal',
@@ -482,7 +492,7 @@ add_action( 'activated_plugin', 'create_rgpd_legal_page' );
 
 // Creates Política de Privacidad RGPD page
 
- function create_rgpd_privacidad_page( $user_id ) {
+function create_rgpd_privacidad_page( $user_id ) {
 
     $post_data = array(
         'post_title' => 'Política de Privacidad',
@@ -609,7 +619,7 @@ add_action( 'activated_plugin', 'create_rgpd_privacidad_page' );
 
 // Creates Política de Cookies RGPD page
 
- function create_rgpd_cookies_page( $user_id ) {
+function create_rgpd_cookies_page( $user_id ) {
 
     $post_data = array(
         'post_title' => 'Política de Cookies',
@@ -660,30 +670,3 @@ El Usuario puede deshabilitar, rechazar y eliminar las cookies —total o parcia
 
 }
 add_action( 'activated_plugin', 'create_rgpd_cookies_page' );
-
-
-// Settings links to the plugin entry in the plugins menu
-function contenido_rgpd_plugin_action_links($links, $file) {
-    static $this_plugin;
- 
-    if (!$this_plugin) {
-        $this_plugin = plugin_basename(__FILE__);
-    }
- 
-    // check to make sure we are on the correct plugin
-    if ($file == $this_plugin) {
- 
-		// link to what ever you want
-        $plugin_links[] = '<a href="' . get_bloginfo('wpurl') . '/wp-admin/admin.php?page=contenido-rgpd">Setiings</a>';
- 
-        // add the links to the list of links already there
-		foreach($plugin_links as $link) {
-			array_unshift($links, $link);
-		}
-    }
- 
-    return $links;
-}
-add_filter('plugin_action_links', 'contenido_rgpd_plugin_action_links', 10, 2);
-
-
